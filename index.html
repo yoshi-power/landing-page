@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Kiwi | 자연의 붉은 보석, 루비 키위</title>
+    <meta name="description" content="달콤한 맛과 놀라운 영양, 속이 붉은 프리미엄 루비 키위를 만나보세요.">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <a href="#" class="logo">RUBY<span>KIWI</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">홈페이지</a></li>
+                <li><a href="#product">제품</a></li>
+                <li><a href="#story">스토리</a></li>
+                <li><a href="#contact">문의</a></li>
+                <li><a href="index_en.html" class="lang-switch">EN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>자연이 빚은<br><span>붉은 보석, 루비 키위</span></h1>
+                <p>일반 키위보다 훨씬 높은 당도와 항산화 성분이 풍부한 안토시아닌이 함유된 프리미엄 키위입니다.</p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="#product" class="cta-button">자세히 보기</a>
+                    <a href="#story" class="cta-button" style="background: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); box-shadow: none;">브랜드 스토리</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="hero.png" alt="Ruby Kiwi Hero Image">
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section id="product">
+            <div class="section-title">
+                <h2>왜 루비 키위인가요?</h2>
+                <p>맛과 영양을 모두 잡은 루비 키위의 특별한 가치</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon"><i data-lucide="zap" style="color: #ffb800;"></i></div>
+                    <h3>최상의 당도 (20+ Brix)</h3>
+                    <p>기존 키위의 새콤함을 뛰어넘는 압도적인 달콤함. 한 입 베어 무는 순간 퍼지는 천연의 꿀맛을 느껴보세요.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i data-lucide="heart" style="color: var(--primary-red);"></i></div>
+                    <h3>슈퍼푸드 안토시아닌</h3>
+                    <p>심장 건강과 시력 보호에 도움을 주는 안토시아닌이 중심부에 가득. 맛있는 건강을 선물합니다.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i data-lucide="leaf" style="color: var(--primary-green);"></i></div>
+                    <h3>100% 친환경 재배</h3>
+                    <p>화학 비료를 최소화하고 자연의 힘으로 길러낸 정직한 과일. 우리 가족이 안심하고 먹을 수 있습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story" id="story">
+            <div class="story-image">
+                <img src="hero.png" alt="Ruby Kiwi Story" style="filter: brightness(0.7);">
+            </div>
+            <div class="story-content">
+                <h2>Our Story</h2>
+                <p>루비 키위는 청정 자연에서 엄격한 품질 관리를 통해 재배됩니다. 우리는 단순히 과일을 파는 것이 아니라, 자연의 가장 신선하고 달콤한 순간을 전달하고자 합니다.</p>
+                <p style="margin-top: 20px;">한 알의 키위에 담긴 정성과 노력, 루비 키위만의 특별함을 느껴보세요.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="section-title">
+                <h2>문의하기</h2>
+                <p>대량 구매 및 제휴 문의는 아래 양식을 작성해 주세요.</p>
+            </div>
+            <div class="contact-container">
+                <form>
+                    <div class="form-group">
+                        <label for="name">이름</label>
+                        <input type="text" id="name" placeholder="성함을 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일</label>
+                        <input type="email" id="email" placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">메시지</label>
+                        <textarea id="message" rows="5" placeholder="문의 내용을 입력하세요"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">보내기</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Youtube</a>
+        </div>
+        <p>&copy; 2026 Ruby Kiwi Co. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
